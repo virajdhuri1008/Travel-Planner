@@ -9,8 +9,10 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const OpenAI = require("openai");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 
 // =======================
 // GROQ SETUP

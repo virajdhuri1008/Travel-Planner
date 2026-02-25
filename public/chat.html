@@ -295,7 +295,9 @@ async function sendMessage(){
     typingDiv.innerText="AI is planning your cinematic journey...";
     chatBox.appendChild(typingDiv);
 
-    const response=await fetch("/ai-chat",{
+    const response = await fetch(
+  "https://travel-planner-backend-if18.onrender.com/ai-chat",
+ {
         method:"POST",
         headers:{ "Content-Type":"application/json" },
         body:JSON.stringify({ message })
